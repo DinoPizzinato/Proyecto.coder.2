@@ -1,33 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Estilos generales básicos */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
+/* Navbar y header: ocupan todo el ancho */
 header {
-  background-color: #2e76d4;
-  padding: 10px 20px;
+  width: 100%;
 }
 
 .navbar {
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
+/* Nav links estilo igual */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .nav-links li a:hover {
@@ -36,46 +42,166 @@ header {
 
 .search-form {
   display: flex;
-  gap: 5px;
+  align-items: center;
 }
 
-.search-form input {
-  padding: 5px;
-  border-radius: 5px;
+.search-form input[type="text"] {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px 0 0 4px;
   border: none;
+  outline: none;
+  width: 150px;
 }
 
 .search-form button {
-  padding: 5px 10px;
-  background-color: rgb(255, 255, 255);
+  padding: 0.3rem 0.6rem;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-main {
-  padding: 20px;
-}
-
-footer {
-  background-color: #2e76d4;
+  border-radius: 0 4px 4px 0;
+  background-color: #0056b3;
   color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-form button:hover {
+  background-color: #003f7f;
+}
+
+/* Título principal centrado con margen y debajo del navbar */
+h1.nombrepag {
+  font-family: Arial, sans-serif;
   text-align: center;
-  padding: 10px;
+  margin: 1rem auto 2rem auto;
+  font-size: 2.5rem;
+  color: #004085;
+  max-width: 900px;
+  display: block;
 }
 
-main img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 15px;
+/* Contenido principal (todo lo que está debajo del h1) centrado y con ancho máximo */
+main,
+section {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Grid productos */
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.product-card {
+  background-color: white;
+  padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+/* Footer ocupa todo el ancho */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+/* Estilos para el formulario de contacto */
+form.form-container {
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  text-align: left;
+}
+
+form.form-container div {
+  margin-bottom: 1rem;
+}
+
+form.form-container label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #004085;
+}
+
+form.form-container input[type="text"],
+form.form-container input[type="email"],
+form.form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1.5px solid #007bff;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+form.form-container textarea {
+  min-height: 100px;
+}
+
+form.form-container .button {
+  text-align: center;
+}
+
+form.form-container button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 430px) {
+  .carousel {
+    max-width: 100%;
+  }
+  .slides > div {
+    height: 220px;
+  }
+  .slides img,
+  .slides iframe {
+    height: 220px;
+  }
+
+  .search-form input[type="text"] {
+    width: 100px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .grid-products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  form.form-container {
+    padding: 1rem 1rem;
+    max-width: 100%;
+  }
 }
