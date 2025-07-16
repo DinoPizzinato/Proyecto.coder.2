@@ -206,11 +206,22 @@ button:focus {
   .menu-icon {
     display: block;
   }
-  #productos-destacados .row {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+
+  /* Hacer que productos se apilen en columna */
+  .grid-products,
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
     gap: 1.5rem;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Asegurar que cada producto ocupa todo el ancho */
+  .grid-products > *,
+  .row > * {
+    width: 100% !important;
   }
 
   .nav-links {
@@ -230,11 +241,7 @@ button:focus {
   }
 
   .search-form input[type="text"] {
-    width: 100px;
-  }
-
-  .grid-products {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   form.form-container {
