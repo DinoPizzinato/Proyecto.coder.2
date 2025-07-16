@@ -4,31 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DFSTORE</title>
+
+    <!-- ícono del sitio en pestañas del navegador -->
     <link
       rel="icon"
       href="./archivos/imagenes/ico/logo.png"
       type="image/x-icon"
     />
 
+    <!-- Importación de Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       crossorigin="anonymous"
     />
+
+    <!-- Fuente personalizada desde Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href=".//styles/style.css" />
+    <!-- Ruta de css -->
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
   <body>
     <header>
       <nav class="navbar">
+        <!-- Menú desplegable para resolusiones de 425px -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
+        <!-- Enlaces de navegación -->
         <ul class="nav-links">
           <li class="inicio"><a href="index.html">Inicio</a></li>
           <li class="inodoros"><a href="./pages/Inodoros.html">Inodoros</a></li>
@@ -37,10 +45,11 @@
           <li class="contacto"><a href="./pages/Contacto.html">Contacto</a></li>
         </ul>
 
+        <!-- Formulario de búsqueda -->
         <form class="search-form" role="search">
-          <label for="search-input" class="visually-hidden"
-            >Buscar productos</label
-          >
+          <label for="search-input" class="visually-hidden">
+            Buscar productos
+          </label>
           <input
             id="search-input"
             type="text"
@@ -54,7 +63,7 @@
     </header>
 
     <main>
-      <!-- Carrusel Bootstrap -->
+      <!-- Carrusel de imágenes y video con Bootstrap -->
       <div
         id="carouselDFSTORE"
         class="carousel slide mx-auto"
@@ -83,6 +92,7 @@
             aria-label="Slide 3"
           ></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
@@ -92,6 +102,7 @@
               style="height: 300px; object-fit: cover; border-radius: 8px"
             />
           </div>
+
           <div class="carousel-item">
             <iframe
               src="https://www.youtube.com/embed/PPXIQRi2r0A?si=cLd2itJmPGMO2hCE"
@@ -101,6 +112,7 @@
               style="width: 100%; height: 300px; border-radius: 8px"
             ></iframe>
           </div>
+
           <div class="carousel-item">
             <img
               src="./archivos/imagenes/index/inicio2.jfif"
@@ -110,6 +122,7 @@
             />
           </div>
         </div>
+
         <button
           class="carousel-control-prev"
           type="button"
@@ -130,7 +143,7 @@
         </button>
       </div>
 
-      <!-- Fila de productos -->
+      <!-- Sección de productos destacados -->
       <section id="productos-destacados" class="container mt-4">
         <h2>Productos Destacados</h2>
         <div class="row g-4">
@@ -144,6 +157,7 @@
             <p><strong>$20.000</strong></p>
             <p>Set de 6 accesorios de baño Soria black</p>
           </div>
+
           <div class="product-card col-3 border p-3">
             <img
               src="./archivos/imagenes/index/kit2.webp"
@@ -154,6 +168,7 @@
             <p><strong>$15.400</strong></p>
             <p>Kit de 7 accesorios de baño blanco</p>
           </div>
+
           <div class="product-card col-3 border p-3">
             <img
               src="./archivos/imagenes/index/kit3.webp"
@@ -162,12 +177,13 @@
             />
             <h5>Just Home Collection</h5>
             <p><strong>$50.000</strong></p>
-            <p>Set de cesto de basura a pedal y escobilla de baño plateado</p>
+            <p>Set de cesto de basura a pedal</p>
           </div>
+
           <div class="product-card col-3 border p-3">
             <img
               src="./archivos/imagenes/index/kit4.webp"
-              alt="imagen de             <p>Set de 4 organizadores de ducha negro</p>"
+              alt="imagen de Set de 4 organizadores de ducha negro"
               class="img-fluid mb-2"
             />
             <h5>Just Home Collection</h5>
@@ -178,10 +194,12 @@
       </section>
     </main>
 
+    <!-- Pie de página -->
     <footer>
       <p>&copy; 2025 DFSTORE - Todos los derechos reservados</p>
     </footer>
 
+    <!-- Scripts de Bootstrap para funcionalidad del carrusel -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

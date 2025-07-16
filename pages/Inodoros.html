@@ -4,26 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inodoros</title>
+
+    <!-- Ícono del sitio web en la pestaña del navegador -->
     <link
       rel="icon"
       href="../archivos/imagenes/ico/logo.png"
       type="image/x-icon"
     />
+
+    <!-- Importación de Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Ruta de css -->
     <link rel="stylesheet" href="../styles/style.css" />
+
+    <!-- Fuente de Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="../stylesheet"
+      rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
       <nav class="navbar">
+        <!-- Menú desplegable para resolusiones de 425px -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <!-- Enlaces de navegación -->
         <ul class="nav-links">
           <li class="inicio"><a href="../index.html">Inicio</a></li>
           <li class="inodoros">
@@ -35,6 +47,8 @@
             <a href="../pages/Contacto.html">Contacto</a>
           </li>
         </ul>
+
+        <!-- Formulario de búsqueda -->
         <form class="search-form" role="search">
           <label for="search-input" class="visually-hidden"
             >Buscar productos</label
@@ -48,11 +62,14 @@
         </form>
       </nav>
     </header>
-    <!-- Fila de productos -->
+
     <main class="container-main">
       <h1>Inodoros</h1>
+
+      <!-- Grid de productos -->
       <section class="row g-4">
         <div class="col-3">
+          <!-- Productos -->
           <div class="product-card">
             <img
               src="../archivos/imagenes/inodoros/inodoro1.webp"
@@ -113,7 +130,7 @@
             />
             <h5>Sensi D' Acqua</h5>
             <p>$45.000</p>
-            <p>inodoro largo Gante dual con deposito y asiento blanco</p>
+            <p>Inodoro largo Gante dual con depósito y asiento blanco</p>
           </div>
         </div>
 
@@ -152,16 +169,18 @@
             />
             <h5>Ferrum</h5>
             <p>$100.000</p>
-            <p>inodoro largo Mayo con depósito y accesorios blanco</p>
+            <p>Inodoro largo Mayo con depósito y accesorios blanco</p>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Pie de página del sitio -->
     <footer>
       <p>&copy; 2025 DFSTORE - Todos los derechos reservados</p>
     </footer>
 
+    <!-- Script de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
