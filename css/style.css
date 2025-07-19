@@ -10,7 +10,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   color: #000000;
-  background-image: url("/archivos/imagenes/contacto/fondodepantalla.jpg"); /* Solo para página de contacto */
+  background-image: url("../archivos/imagenes/contacto/fondodepantalla.jpg");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
