@@ -1,8 +1,13 @@
 /* Estilos generales básicos */
+html,
 body {
-  font-family: Arial, sans-serif;
+  height: 100%; /* Necesario para flex en body */
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   color: #000000;
   background-image: url("/archivos/imagenes/contacto/fondodepantalla.jpg"); /* Solo para página de contacto */
@@ -11,6 +16,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Open Sans", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Estilo del header y barra de navegación */
@@ -85,7 +94,7 @@ header {
 }
 
 .search-form button:hover {
-  background-color: #fd0404;
+  background-color: #979797;
 }
 
 /* Estilo del título principal centrado */
@@ -116,6 +125,10 @@ section {
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
+}
+
+main {
+  flex: 1 0 auto; /* Para que main crezca y empuje footer */
 }
 
 /* Fuerza distribución horizontal de 4 productos por fila */
@@ -156,7 +169,6 @@ section {
 }
 
 /* Estilo individual para cada tarjeta de producto */
-/* Asegura altura automática y contenido ordenado en tarjetas de producto */
 .product-card {
   display: flex;
   flex-direction: column;
@@ -166,13 +178,11 @@ section {
   padding: 1rem;
   overflow-wrap: break-word;
   word-break: break-word;
-  padding: 1rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Imágenes responsivas dentro de la tarjeta */
 .product-card img {
   width: 100%;
   height: auto;
@@ -180,7 +190,6 @@ section {
   margin-bottom: 0.5rem;
 }
 
-/* Título y precio */
 .product-card h5 {
   font-size: 1.1rem;
   margin: 0.5rem 0 0.2rem;
@@ -209,6 +218,7 @@ section {
 
 /* Estilo del pie de página */
 footer {
+  flex-shrink: 0; /* Para que footer no se reduzca */
   width: 100%;
   text-align: center;
   padding: 1rem;
@@ -231,7 +241,6 @@ form.form-container {
   text-align: left;
 }
 
-/* Estilo de inputs y textarea del formulario */
 .form-container input,
 .form-container textarea {
   width: 100%;
@@ -244,7 +253,6 @@ form.form-container {
   font-size: 1rem;
 }
 
-/* Estilo de botón dentro del formulario */
 .form-container .button button {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -260,7 +268,6 @@ form.form-container {
   background-color: #2c2e30;
 }
 
-/* Estilo para etiquetas del formulario */
 form.form-container label {
   display: block;
   margin-bottom: 0.4rem;
@@ -268,7 +275,6 @@ form.form-container label {
   color: #373a3d;
 }
 
-/* Tamaño mínimo y capacidad de redimensionar textarea */
 form.form-container textarea {
   min-height: 100px;
   resize: vertical;
@@ -288,7 +294,6 @@ button:focus {
     display: block;
   }
 
-  /* Apilar productos en columna para mejor visualización móvil */
   .grid-products,
   .row {
     display: flex !important;
@@ -299,13 +304,11 @@ button:focus {
     box-sizing: border-box;
   }
 
-  /* Asegurar ancho completo para cada producto */
   .grid-products > *,
   .row > * {
     width: 100% !important;
   }
 
-  /* Ocultar enlaces y mostrarlos solo cuando menú hamburguesa activo */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -318,17 +321,14 @@ button:focus {
     z-index: 10;
   }
 
-  /* Mostrar menú cuando el toggle está activo */
   .menu-toggle:checked + .menu-icon + .nav-links {
     display: flex;
   }
 
-  /* Ajuste del input búsqueda para móviles */
   .search-form input[type="text"] {
     width: 100%;
   }
 
-  /* Ajuste padding y ancho del formulario contacto en móvil */
   form.form-container {
     padding: 1rem;
     max-width: 100%;

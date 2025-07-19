@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+// Estilos generales
+body {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  background-color: $color-bg;
+  color: $color-black;
+  background-image: url("/archivos/imagenes/contacto/fondodepantalla.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1.nombrepag {
+  text-align: center;
+  margin: 1rem auto 2rem auto;
+  font-size: 2.5rem;
+  color: $color-black;
+  max-width: 900px;
+  display: block;
+}
+
+h2,
+h3,
+h5 {
+  font-family: $font-secondary;
+}
+
+main,
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: $color-dark;
+  color: $color-light;
+  font-weight: 600;
+}
+
+// Accesibilidad focus
+input:focus,
+textarea:focus,
+button:focus {
+  @include focus-style();
+}

@@ -1,0 +1,102 @@
+@import "variables";
+@import "mixins";
+
+header {
+  width: 100%;
+}
+
+.navbar {
+  background-color: $color-dark;
+  padding: 0.5rem 1rem;
+  @include flex-space-between;
+  width: 100%;
+  position: relative;
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: $color-light;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        color: $color-light;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+
+    input[type="text"] {
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px 0 0 4px;
+      border: none;
+      outline: none;
+      width: 150px;
+    }
+
+    button {
+      padding: 0.3rem 0.6rem;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      background-color: $color-light;
+      color: $color-light; // Esto estaba en tu original, aunque el texto blanco sobre blanco no se ve. ¿Quieres que cambie?
+      cursor: pointer;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: $color-accent;
+      }
+    }
+  }
+}
+
+// Responsive menú hamburguesa y ajustes móviles
+@media (max-width: 425px) {
+  .navbar {
+    .menu-icon {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: $color-dark;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+      z-index: 10;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+      display: flex;
+    }
+
+    .search-form input[type="text"] {
+      width: 100px;
+    }
+  }
+}
