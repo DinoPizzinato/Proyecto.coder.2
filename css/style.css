@@ -334,11 +334,16 @@ button:focus {
 
   /* Ajuste padding y ancho formulario en móvil */
   form.form-container {
-    padding: 1rem;
-    max-width: 100%;
+    padding: 2rem;
+    max-width: 90%;
+    width: 80vw;
   }
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* Ajustes específicos para iframe mapa en contacto */
 iframe {
   width: 950px;
