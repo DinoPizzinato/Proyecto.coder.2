@@ -39,20 +39,20 @@ header {
 
 /* Estilo y comportamiento del menú hamburguesa */
 .menu-toggle {
-  display: none;
+  display: none; /* Oculto por defecto, se muestra solo en móvil */
 }
 
 .menu-icon {
-  display: none;
+  display: none; /* Ícono menú hamburguesa oculto inicialmente */
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  user-select: none;
+  user-select: none; /* Evita selección accidental */
 }
 
 /* Estilo de los enlaces de navegación */
 .nav-links {
-  list-style: none;
+  list-style: none; /* Quitar viñetas */
   display: flex;
   gap: 1.5rem;
   margin: 0;
@@ -66,7 +66,7 @@ header {
 }
 
 .nav-links li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Feedback al pasar el mouse */
 }
 
 /* Estilo del formulario de búsqueda */
@@ -128,7 +128,7 @@ section {
 }
 
 main {
-  flex: 1 0 auto; /* Para que main crezca y empuje footer */
+  flex: 1 0 auto; /* Permite que main crezca y empuje footer */
 }
 
 /* Fuerza distribución horizontal de 4 productos por fila */
@@ -145,7 +145,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* Corrección responsive: 100% en pantallas pequeñas */
+/* Corrección responsive: 2 productos por fila en tablet */
 @media (max-width: 768px) {
   .row.g-4 > .col-3 {
     flex: 0 0 48%;
@@ -153,6 +153,7 @@ main {
   }
 }
 
+/* Corrección responsive: 1 producto por fila en móvil */
 @media (max-width: 425px) {
   .row.g-4 > .col-3 {
     flex: 0 0 100%;
@@ -218,7 +219,7 @@ main {
 
 /* Estilo del pie de página */
 footer {
-  flex-shrink: 0; /* Para que footer no se reduzca */
+  flex-shrink: 0; /* Evita que el footer se reduzca */
   width: 100%;
   text-align: center;
   padding: 1rem;
@@ -277,7 +278,7 @@ form.form-container label {
 
 form.form-container textarea {
   min-height: 100px;
-  resize: vertical;
+  resize: vertical; /* Permite cambiar altura vertical */
 }
 
 /* Estilos para foco accesible */
@@ -291,7 +292,7 @@ button:focus {
 /* Responsive: mostrar menú hamburguesa y ajustar layout para pantallas pequeñas */
 @media (max-width: 425px) {
   .menu-icon {
-    display: block;
+    display: block; /* Mostrar ícono menú hamburguesa en móvil */
   }
 
   .grid-products,
@@ -310,7 +311,7 @@ button:focus {
   }
 
   .nav-links {
-    display: none;
+    display: none; /* Ocultar navegación normal en móvil */
     flex-direction: column;
     background-color: #373a3d;
     position: absolute;
@@ -321,14 +322,17 @@ button:focus {
     z-index: 10;
   }
 
+  /* Mostrar menú desplegable cuando está activo */
   .menu-toggle:checked + .menu-icon + .nav-links {
     display: flex;
   }
 
+  /* Ajuste input búsqueda ancho completo en móvil */
   .search-form input[type="text"] {
     width: 100%;
   }
 
+  /* Ajuste padding y ancho formulario en móvil */
   form.form-container {
     padding: 1rem;
     max-width: 100%;
@@ -347,7 +351,6 @@ iframe {
 
 @media (max-width: 425px) {
   iframe {
-    width: 100% !important;
-    height: 250px !important;
+    width: 100%;
   }
 }
